@@ -1,0 +1,61 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+    <title>热门发帖排行系统</title>
+</head>
+<body>
+
+
+<form action="/test" method="get">
+    <input type="submit" value="test">
+</form>
+<form action="/preheating" method="get">
+    <input type="submit" value="数据预热">
+</form>
+<h1>热门发帖排行系统</h1>
+<h2>查询当下最热门的50条帖子</h2>
+<form action="/show_rank" method="post">
+    热榜主题:<input type="text" name="key">
+    <input type="submit" value="查询">
+</form>
+
+<h2>查询指定帖子的热度</h2>
+<form action="/show_one" method="post">
+    热榜主题:<input type="text" name="key">
+    帖子名:<input type="text" name="member">
+    <input type="submit" value="查询">
+</form>
+
+<h2>创建一个新的热门帖子</h2>
+<form action="/new_item" method="post">
+    热榜主题:<input type="text" name="key">
+    帖子名:<input type="text" name="member">
+    预设热度（默认为0）:<input type="text" name="score">
+    <input type="submit" value="创建">
+</form>
+
+<h2>修改已有帖子的热度</h2>
+<form action="/fix" method="post">
+    热榜主题:<input type="text" name="key">
+    帖子名:<input type="text" name="member">
+    修改后的热度值:<input type="text" name="score">
+    <input type="submit" value="执行">
+</form>
+
+<h2>查询给定帖子在热搜榜中的排名</h2>
+<form action="/one_rank" method="post">
+    热榜主题:<input type="text" name="key">
+    要搜索的热搜帖子名:<input type="text" name="member">
+    <input type="submit" value="执行">
+</form>
+
+<h2>删除已有的热搜帖子</h2>
+<form action="/delete_one" method="post">
+    热榜主题:<input type="text" name="key">
+    要删除的热搜帖子名:<input type="text" name="member">
+    <input type="submit" value="执行">
+</form>
+
+
+</body>
+</html>

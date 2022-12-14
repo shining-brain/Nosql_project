@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最热帖子</title>
+</head>
+<body>
+<h1>当下最热门帖子TOP50</h1>
+<table border="1">
+    <tr>
+        <td>热度排行</td>
+        <td>帖子标题</td>
+        <td>热度</td>
+    </tr>
+    {{range .}}
+    <tr>
+        <td>{{.Id}}</td>
+        <td>{{.Member}}</td>
+        <td>{{.Score}}</td>
+    </tr>
+    {{end}}
+</table>
+<br><br>
+<form action="/back" method="get">
+    <input type="submit" value="返回上一界面">
+</form>
+</body>
+</html>
